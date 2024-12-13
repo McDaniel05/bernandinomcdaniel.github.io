@@ -1,0 +1,649 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  width: 100%;  /* Ensure full width */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  
+  
+}
+
+header {
+    background-color: #4B5945;
+    padding: 20px 40px;
+    position: fixed; /* Fixed at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's above all other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  list-style: none;
+  display: flex; /* Keep items inline */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allow wrapping if space runs out */
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: calc(16px + 0.5vw); /* Dynamically scale font size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+nav ul li a:hover {
+  color: #B2C9AD;
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Reduce padding for smaller screens */
+  }
+  nav ul {
+    justify-content: center; /* Center-align links */
+    flex-wrap: wrap; /* Wrap items if needed */
+  }
+  nav ul li {
+    margin: 5px 10px; /* Reduce spacing between items */
+  }
+  nav ul li a {
+    font-size: calc(14px + 0.5vw); /* Smaller scaling for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px; /* Minimize padding for very small screens */
+  }
+  nav ul {
+    justify-content: space-around; /* Space links evenly */
+  }
+  nav ul li a {
+    font-size: 14px; /* Fixed font size for very small screens */
+  }
+}
+
+section {
+  height: 100vh; /* Full viewport height for each section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Home Section Styling */
+#home {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  color: white;
+  text-align: left;
+
+  background-image: url('Resources/Background.png'); /* Background image */
+  background-size: cover; /* Ensure the image covers the area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  padding: 50px; /* Add space from edges */
+}
+
+/* Main Dashboard Styling */
+.MainDashboard {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  gap: 20px; /* Add space between items */
+  width: 100%;
+}
+.social-icons{
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the icons horizontally */
+  gap: 30px;
+}
+.social-icons i {
+  font-size: 40px; /* Adjust the icon size */
+  color: #fff; /* Icon color */
+  cursor: pointer; /* Makes the icons clickable */
+}
+.social-icons i:hover {
+  color: #000000; /* Change color on hover */
+  transform: scale(1.6); /* Enlarge the icon on hover */
+}
+
+/* Text Content Styling */
+.text-content {
+  max-width: 60%; /* Limit width of the text section */
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.MainDashboard h1 {
+  font-size: 80px; /* Large font size for the title */
+  font-weight: bold;
+  margin: 0;
+  animation: fadeInScale 2s ease-out;
+}
+
+.MainDashboard .sub {
+  font-size: 40px; /* Subtitle font size */
+  margin-top: 10px;
+  animation: fadeInScale 2s ease-out;
+}
+
+/* Profile Image Styling */
+.Profile {
+  max-width: 350px; /* Responsive width for the profile image */
+  height: auto; /* Maintain aspect ratio */
+  border: 5px solid #ffffff; /* Add white border */
+  border-radius: 20%; /* Make the image circular */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+  margin-right: 200px;
+  
+}
+.Profile:hover{
+  transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.8;
+}
+
+/* Responsive Styling */
+
+/* For Tablets and Small Screens */
+@media (max-width: 768px) {
+  .MainDashboard {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center-align text */
+  }
+
+  .Profile {
+    order: 2; /* Move profile below text */
+    margin-top: 20px; /* Add space between text and image */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+  }
+
+  .MainDashboard h1 {
+    font-size: 6vw; /* Adjust title font size */
+  }
+
+  .MainDashboard .sub {
+    font-size: 4vw; /* Adjust subtitle font size */
+  }
+
+  .Profile {
+    max-width: 150px; /* Smaller profile image */
+  }
+}
+
+/* For Phones and Very Small Screens */
+@media (max-width: 480px) {
+  .MainDashboard h1 {
+    font-size: 8vw; /* Adjust title font size for small screens */
+  }
+
+  .MainDashboard .sub {
+    font-size: 5vw; /* Adjust subtitle font size */
+  }
+
+  .Profile {
+    max-width: 120px; /* Smaller profile image for phones */
+    align-items: center;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+  }
+}
+
+#about {
+  padding: 50px 20px;
+  background-color: #2c5023;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: calc(18px + 2vw); /* Adjusts font size based on screen width */
+}
+
+.aboutdan, .aboutdan2 {
+  max-width: 1000px;
+  margin: 0px auto; /* Added spacing between sections */
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  font-size: calc(8px + 1vw); /* Adjusts font size based on screen width */
+  line-height: 1.6;
+  text-align: center;
+  border-color: white;
+
+}
+
+/* Ensure spacing between each section */
+.aboutdan {
+  margin-bottom: 10px;
+}
+
+.aboutdan2 {
+  margin-top: 10px;
+}
+
+/* Responsive Font Size for Smaller Screens */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: calc(20px + 2vw); /* Slightly smaller for tablets */
+  }
+
+  .aboutdan, .aboutdan2 {
+    font-size: calc(14px + 1vw); /* Adjust text size for smaller screens */
+  }
+}
+
+/* For Very Small Screens */
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 24px; /* Fixed font size for small screens */
+  }
+
+  .aboutdan, .aboutdan2 {
+    font-size: 16px; /* Fixed font size for very small screens */
+  }
+}
+
+/* My Family Section */
+#myfamily {
+  background-image: url('Resources/FamilyBackground1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  min-height: 100vh; /* Ensure full screen height */
+  display: flex;
+  flex-direction: column; /* Stack heading and content vertically */
+  justify-content: center; /* Center-align content vertically */
+  align-items: center; /* Center-align horizontally */
+}
+
+/* Title Styling */
+#myfamily h2 {
+  font-size: calc(24px + 1vw); /* Responsive font size */
+  margin-bottom: 30px; /* Space below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow */
+  z-index: 10; /* Ensure the heading is above any other content */
+}
+
+/* Family Members Container */
+.family-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px;
+  width: 100%; /* Full width of the section */
+  z-index: 10; /* Ensure proper layering */
+}
+
+/* Individual Family Member Styling */
+.family-member {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 15px;
+  border: 2px solid #4B5945;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  position: relative; /* For proper positioning of description */
+  overflow: hidden; /* Prevent description overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.family-member img {
+  width: 100%; /* Image fits container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10%; /* Rounded corners */
+  object-fit: cover; /* Prevent distortion */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Description Styling */
+.description {
+  display: block; /* Ensures it occupies space */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #B2C9AD; /* Darker for better text contrast */
+  color: #ffffff; /* Ensures white text */
+  font-size: 16px; /* Larger font for readability */
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Position it off-screen */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow */
+}
+
+.famposition{
+  font-weight: bolder;
+}
+  
+
+/* Hover Effect for Family Members */
+.family-member:hover .description {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Slide into view */
+}
+
+/* Hover Effect for Cards */
+.family-member:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Text for Cards */
+.family-member p {
+  margin-top: 10px;
+  font-size: calc(14px + 0.5vw);
+  color: #333;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets */
+@media (max-width: 700px) {
+  .family-members {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
+  #myfamily h2 {
+    font-size: 24px; /* Adjust title size */
+  }
+}
+
+/* For Phones */
+@media (max-width: 300px) {
+  .family-members {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 15px; /* Reduce gap between rows */
+  }
+
+  .family-member {
+    max-width: 90%; /* Limit card width on small screens */
+    margin: 0 auto; /* Center cards horizontally */
+  }
+
+  #myfamily h2 {
+    font-size: 20px; /* Adjust title size */
+  }
+}
+
+#gallery {
+  padding: 20px;
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center;
+  height: auto;  /* Ensures the section height adjusts based on content */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+#gallery h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Gallery Container */
+.gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts grid layout */
+  gap: 15px;
+  padding: 20px;
+  max-height: none; /* Ensures no limit on height for larger screens */
+  overflow: visible; /* Avoids overflow and scrollbars */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Hover Effect */
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* For Tablets (Max Width 768px) */
+@media (max-width: 768px) {
+  #gallery h2 {
+    font-size: 26px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .gallery-img {
+    transition: transform 0.2s ease;
+  }
+}
+
+/* For Phones (Max Width 480px) */
+@media (max-width: 480px) {
+  #gallery h2 {
+    font-size: 22px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for phones */
+    gap: 10px; /* Smaller gap between items */
+  }
+
+  .gallery-img {
+    transition: transform 0.2s ease;
+  }
+}
+
+
+
+
+#contact {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  position: relative;
+}
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  background-size: cover;
+}
+.content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; /* Optional, to center text */
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.text p{
+  font-size: 20px;
+}
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  width: 250px;
+}
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+  text-align: left;
+}
+.container .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #B2C9AD;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.contactForm{
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+.contactForm h2{
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background: #2c5023;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+
+}
+@media screen and (max-width: 480px) {
+  .container .contactInfo {
+    width: 80%; /* Full width */
+  
+    padding: 0px; /* Add padding inside the contact info for better spacing */
+  }
+
+  .contactForm {
+    width: 100%;
+    padding: 20px; /* Adjust padding in the form */
+  }
+
+  .content {
+    font-size: 24px; /* Adjust font size for small screens */
+  }
+
+  .contactForm h2 {
+    font-size: 20px;
+  }
+
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea {
+    font-size: 12px;
+  }
+
+  .contactForm .inputBox span {
+    font-size: 12px;
+  }
+
+  .contactForm .inputBox input[type="submit"] {
+    width: 100%;
+  }
+}
+
+
+
+footer{
+  text-align: center;
+  padding: 8px;
+  background-color: #2c5023;
+  color: white;
+
+}
+
+

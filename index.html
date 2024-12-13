@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mc Daniel E. Bernadnino</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bernandino.css">
+    <script src="bernandino.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#myfamily">My Family</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="MainDashboard">
+        <div>
+          <h1 id="main-title">Mc Daniel Bernandino</h1>
+          <p class="sub" id="sub-title">Website Portfolio</p>
+        </div>
+        <img class="Profile" src="Resources/DanProfile.png">
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/EchanoDan.05" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/_danmcxc/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/McDaniel05" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="aboutdan">
+        <p>Hi! I'm Mc Daniel E. Bernandino, a Bachelor of Science in Information Technology student in Camarines Norte State College.</p>
+        <p>I am focusing on developing my skills specially in programming.</p>
+        <p>I aim to pursue a career in Technology Industry, where I can contribute to innovative tech solutions.</p>
+      </div>
+      <div class="aboutdan2">
+        <p>You can call me "Dan" for short. </p>
+        <p>I am 20 years old. </p>
+        <p>I'm the second of three siblings in my family.</p>
+        <p>I live at Barangay Camambugan, Daet Camarines Norte.</p>
+      </div>
+    </section>
+  
+    <section id="myfamily">
+      <h2>My Family</h2>
+      <div class="family-members">
+        <div class="family-member" onclick="showDescription(this)">
+          <img src="Resources/mom.png" alt="Mom">
+          <div class="description">
+            <p class="famposition">Mom</p>
+            <p>The heart of our home, always caring and nurturing.</p>
+          </div>
+        </div>
+        <div class="family-member" onclick="showDescription(this)">
+          <img src="Resources/DAD.jpg" alt="Dad">
+          <div class="description">
+            <p class="famposition">Dad</p>
+            <p>The pillar of our family, always supportive and hardworking.</p>
+          </div>
+        </div>
+        <div class="family-member" onclick="showDescription(this)">
+          <img src="Resources/Ate.jpg" alt="Elder Sister">
+          <div class="description">
+            <p class="famposition">Elder Sister</p>
+            <p>Creative and ambitious, always full of energy.</p>
+          </div>
+        </div>
+        <div class="family-member" onclick="showDescription(this)">
+          <img src="Resources/Bunso.jpg" alt="Younger Sister">
+          <div class="description">
+            <p class="famposition">Younger Sister</p>
+            <p>Cheerful and kind-hearted, spreading positivity everywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="gallery">
+      <div class="gallery-container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="gallery/picture1.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture2.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture3.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture4.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture5.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture6.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture7.jpeg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture7.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture8.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture9.jpg"  class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture10.jpg" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img src="gallery/picture11.jpg" class="gallery-img">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+  
+    <section id="contact">
+      <div class="content">
+          <h2>Contact Me</h2>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="text">
+              <h3>Address</h3>
+              <p>Purok 1. Barangay Camambugan, Daet, Camarines Norte</p>
+            </div>
+          </div> 
+          <div class="box">
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+639661339168</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <h3>Email</h3>
+              <p>bernandinomcdaniel@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactForm">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contacts">
+            <h2>Send Message</h2>
+        
+            <!-- Full Name -->
+            <div class="inputBox">
+              <input type="text" name="full_name" required>
+              <span>Full Name</span>
+            </div>
+        
+            <!-- Email -->
+            <div class="inputBox">
+              <input type="email" name="email" required>
+              <span>Email</span>
+            </div>
+        
+            <!-- Message -->
+            <div class="inputBox">
+              <textarea name="message" required></textarea>
+              <span>Type your Message...</span>
+            </div>
+        
+            <!-- Hidden Input for API Key -->
+            <input type="hidden" name="access_key" value="05922193-88bb-41cc-9ce2-854b3ab11d1c">
+        
+            <!-- Submit Button -->
+            <div class="inputBox">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </section>
+  
+    <footer>
+      <p>&copy; 2024 Mc Daniel Bernandino. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
